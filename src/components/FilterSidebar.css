@@ -1,0 +1,75 @@
+.filter-sidebar {
+  border: 1px solid var(--color-line-light);
+  padding: 1.5rem;
+  align-self: start;
+  position: sticky;
+  top: 90px;
+}
+
+.filter-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.filter-sidebar__header h3 {
+  font-size: 1rem;
+}
+
+.filter-sidebar__reset {
+  background: none;
+  border: none;
+  color: var(--color-orange-dark);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.filter-sidebar__group {
+  padding: 1rem 0;
+  border-top: 1px solid var(--color-line-light);
+}
+
+.filter-sidebar__group:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.filter-sidebar__group h4 {
+  font-size: 0.82rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+}
+
+.filter-sidebar__group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.filter-sidebar__group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #4b463c;
+}
+
+.filter-sidebar__group input[type='range'] {
+  width: 100%;
+  accent-color: var(--color-orange);
+}
+
+.filter-sidebar__price-value {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-text-dim);
+}
+
+@media (max-width: 900px) {
+  .filter-sidebar {
+    position: static;
+  }
+}

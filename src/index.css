@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+
+:root {
+  /* ---- Timeline brand tokens ---- */
+  --color-black: #13110d;
+  --color-black-soft: #1c1914;
+  --color-orange: #ff5a1f;
+  --color-orange-dark: #d8430c;
+  --color-orange-tint: #fff1ea;
+  --color-white: #ffffff;
+  --color-offwhite: #f3f1ec;
+  --color-line-dark: #34302a;
+  --color-line-light: #e2ded4;
+  --color-text-dim: #b8b2a6;
+  --color-success: #1f7a4d;
+  --color-danger: #c2410c;
+
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'IBM Plex Sans', 'Segoe UI', sans-serif;
+
+  --max-width: 1280px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  --radius-sm: 3px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 0 rgba(19, 17, 13, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-black);
+  background: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site main {
+  flex: 1;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.section {
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(1.75rem, 4vw, 2.75rem);
+}
+
+.section-head h2 {
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+}
+
+.section-kicker {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--color-orange-dark);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--color-orange);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background: var(--color-orange-dark);
+}
+
+.btn-outline-dark {
+  background: transparent;
+  border-color: var(--color-black);
+  color: var(--color-black);
+}
+
+.btn-outline-dark:hover {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-outline-light {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.4);
+  color: var(--color-white);
+}
+
+.btn-outline-light:hover {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn-sm {
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.tick-corner {
+  position: relative;
+}
+
+.tick-corner::before,
+.tick-corner::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-top: 1.5px solid var(--color-orange);
+  border-left: 1.5px solid var(--color-orange);
+  top: 0;
+  left: 0;
+}
+
+.tick-corner::after {
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1.5px solid var(--color-orange);
+  border-right: 1.5px solid var(--color-orange);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,39 @@
+.account__note {
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+  border-left: 2px solid var(--color-orange);
+  padding-left: 0.85rem;
+  margin-bottom: 2rem;
+  max-width: 62ch;
+}
+
+.account__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.account__card {
+  border: 1px solid var(--color-line-light);
+  padding: 1.5rem;
+}
+
+.account__card:hover {
+  border-color: var(--color-orange);
+}
+
+.account__card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.account__card p {
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+}
+
+@media (max-width: 700px) {
+  .account__grid {
+    grid-template-columns: 1fr;
+  }
+}

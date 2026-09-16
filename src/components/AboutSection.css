@@ -1,0 +1,17 @@
+.about__panel {
+  background: var(--color-white);
+  border: 1px solid var(--color-line-light);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  max-width: 760px;
+}
+
+.about__headline {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0.4rem 0 1.1rem;
+}
+
+.about__text {
+  color: #4b463c;
+  margin-bottom: 1.5rem;
+  max-width: 68ch;
+}

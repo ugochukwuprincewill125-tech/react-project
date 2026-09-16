@@ -1,0 +1,31 @@
+.locations__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.locations__card {
+  border: 1px solid var(--color-line-light);
+  border-left: 3px solid var(--color-orange);
+  padding: 1.5rem;
+}
+
+.locations__label {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.locations__address {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  color: #4b463c;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .locations__grid {
+    grid-template-columns: 1fr;
+  }
+}

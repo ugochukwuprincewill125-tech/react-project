@@ -1,0 +1,78 @@
+.shop__layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.shop__toolbar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.shop__search-input {
+  flex: 1;
+  min-width: 200px;
+  border: 1.5px solid var(--color-line-light);
+  padding: 0.65rem 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.shop__search-input:focus {
+  outline: none;
+  border-color: var(--color-orange);
+}
+
+.shop__sort {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+  flex-shrink: 0;
+}
+
+.shop__sort select {
+  border: 1.5px solid var(--color-line-light);
+  padding: 0.6rem 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  background: var(--color-white);
+}
+
+.shop__count {
+  font-size: 0.85rem;
+  color: var(--color-text-dim);
+  margin-bottom: 1rem;
+}
+
+.shop__pagination {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.shop__page-btn {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--color-line-light);
+  background: var(--color-white);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.shop__page-btn--active {
+  background: var(--color-orange);
+  border-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+@media (max-width: 900px) {
+  .shop__layout {
+    grid-template-columns: 1fr;
+  }
+}
