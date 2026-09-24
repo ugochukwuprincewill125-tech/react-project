@@ -1,5 +1,7 @@
 import brands from "../data/brands";
 import "./BrandSection.css";
+import Tp from "../assets/logo/tplink.png"; 
+
 
 function BrandSection() {
   return (
@@ -22,8 +24,7 @@ function BrandSection() {
           </div>
         ) : (
           <div className="brands__empty">
-            Brand logos will appear here once added — this section is ready to
-            populate from <code>src/data/brands.js</code>.
+            <p>No brands available at the moment.</p>
           </div>
         )}
       </div>
